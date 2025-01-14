@@ -2,9 +2,9 @@ package lab05;
 
 /**
  * Describe about Current-Subjects in Class.
- * @author Ten
- * @version 1.1
- * @modified 13-01-2025
+ * @author Prachna
+ * @version 1.2
+ * @modified 14-01-2025
  */
 public class App {
     public static void main(String[] args) {
