@@ -4,9 +4,10 @@ package lab05;
 
 // @Getter @Setter
 public class Subject {
-    private String subjectName; // e.g. Intero to SE
-    private int subjectCode; // e.g. 1
-    private int numberOfCredits = 1;
+    private String subjectName = "Introduction to Software Engineering"; // e.g. Intro to SE
+    private int subjectCode = 015; // e.g. 1
+    private int numberOfCredits = 100;
+    private final String season = "S2";
 
     public Subject() {
         super();
@@ -17,18 +18,20 @@ public class Subject {
         this.subjectCode = subjectCode;
         this.numberOfCredits = numberOfCredits;
     }
-
     public String getSubjectName() {
         return subjectName;
     }
-    public void setSubjectName(String subjectName) {
+    public void setSubjectName(String subjectName) throws IllegalArgumentException {
+        if (subjectName == null || subjectName.isEmpty()) {
+            throw new IllegalArgumentException("Subject name was not assigned!");
+        }
         this.subjectName = subjectName;
-    }
-    public int getSubjectCode() {
-        return subjectCode;
     }
     public void setSubjectCode(int subjectCode) {
         this.subjectCode = subjectCode;
+    }
+    public int getSubjectCode() {
+        return subjectCode;
     }
     public int getNumberOfCredits() {
         return numberOfCredits;
@@ -36,4 +39,11 @@ public class Subject {
     public void setNumberOfCredits(int numberOfCredits) {
         this.numberOfCredits = numberOfCredits;
     }
+    public final String getSeason() {
+        return season;
+    }
+    public void setName(String name) throws IllegalArgumentException {
+
+    }
+    
 }

@@ -1,17 +1,17 @@
 package lab05;
 
 /**
- * Describe about Subjects in Class.
+ * Describe about Current-Subjects in Class.
  * @author Ten
- * @version 1.0
- * @modified 10-01-2025
+ * @version 1.1
+ * @modified 13-01-2025
  */
 public class App {
     public static void main(String[] args) {
         Subject se = new Subject();
-        se.setNumberOfCredits(0);
-        se.setNumberOfCredits(0);
-        se.setNumberOfCredits(0);
-
+        System.out.println("Initial Credit: " + se.getNumberOfCredits());
+        se.setNumberOfCredits(90);
+        System.out.println("After credit: " + se.getNumberOfCredits());
+        System.out.println("Season: " + se.getSeason());
     }
 }
